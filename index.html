@@ -5,6 +5,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="./files/bootstrap.min.css">
 
 <link rel="stylesheet" href="./files/animate.min.css">
@@ -26,6 +30,327 @@
 <link rel="stylesheet" href="./files/style.css">
 
 <link rel="stylesheet" href="./files/responsive.css">
+
+<style>
+  /* Kid-Friendly Fonts with Cyrillic Support */
+  * {
+    font-family: 'Fredoka', 'Quicksand', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+  }
+  
+  p, span {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  /* Cool Girly Animations */
+  @keyframes bounce-rotate {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+  }
+
+  @keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(14, 165, 233, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.8); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+
+  @keyframes rainbow-text {
+    0% { color: #ff69b4; }
+    25% { color: #ff1493; }
+    50% { color: #ff69b4; }
+    75% { color: #ff69b4; }
+    100% { color: #ff69b4; }
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+  }
+
+  /* Main Banner Enhancements */
+  .main-banner {
+    background: linear-gradient(135deg, #ede9fe 0%, #fce7f3 35%, #f0e7ff 50%, #e0f2fe 100%);
+    overflow: hidden;
+  }
+
+  .main-banner span {
+    font-size: 1.5rem;
+    animation: wiggle 2s ease-in-out infinite;
+    display: inline-block;
+    color: #7c3aed;
+    font-weight: 600;
+  }
+
+  .main-banner h1 {
+    font-size: 4rem;
+    animation: bounce-rotate 3s ease-in-out infinite;
+    color: #0ea5e9;
+    text-shadow: 2px 2px 4px rgba(14, 165, 233, 0.3);
+  }
+
+  .main-banner p {
+    color: #6366f1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .main-banner-image {
+    animation: float 3.5s ease-in-out infinite;
+  }
+
+  .main-banner-image img {
+    filter: drop-shadow(0 10px 20px rgba(168, 85, 247, 0.3));
+    transition: transform 0.3s ease;
+  }
+
+  .main-banner-image img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Button Styling */
+  .default-btn, .optional-btn {
+    animation: pulse-glow 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 12px 30px;
+  }
+
+  .default-btn {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: white;
+    border: none;
+  }
+
+  .default-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.5);
+  }
+
+  .optional-btn {
+    background: linear-gradient(135deg, #60a5fa, #93c5fd);
+    color: #7c3aed;
+    border: 2px solid #a855f7;
+    font-weight: 600;
+  }
+
+  .optional-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #93c5fd, #60a5fa);
+  }
+
+  /* Banner Button Container */
+  .banner-btn {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Who We Are Section */
+  .who-we-are {
+    background: linear-gradient(135deg, #fef2f8 0%, #f0e7ff 50%, #ede9fe 100%);
+  }
+
+  .who-we-are h3 {
+    color: #7c3aed;
+    animation: bounce-rotate 3s ease-in-out infinite;
+  }
+
+  .who-we-are span {
+    color: #a855f7;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .who-we-are-list li {
+    animation: fadeInUp 0.8s ease-out backwards;
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .who-we-are-list li:nth-child(1) { animation-delay: 0.1s; }
+  .who-we-are-list li:nth-child(2) { animation-delay: 0.2s; }
+  .who-we-are-list li:nth-child(3) { animation-delay: 0.3s; }
+  .who-we-are-list li:nth-child(4) { animation-delay: 0.4s; }
+
+  .who-we-are-list li span {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Remove who-we-are-image */
+  .who-we-are-image {
+    display: none !important;
+  }
+
+  /* Kvizovi Section */
+  .kvizovi-link {
+    margin: 15px 0;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .kvizovi-link a {
+    display: inline-block;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #ec4899, #f472b6);
+    color: white;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Fredoka', sans-serif;
+    border: 2px solid #be185d;
+  }
+
+  .kvizovi-link a:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(135deg, #f472b6, #ec4899);
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.4);
+  }
+
+  /* Section Titles */
+  .who-we-are-content > span {
+    color: #7c3aed;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  /* Who We Are Image */
+  .who-we-are-image-new {
+    animation: float 3.5s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .who-we-are-image-new img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    filter: drop-shadow(0 15px 30px rgba(236, 72, 153, 0.4));
+    transition: transform 0.3s ease;
+  }
+
+  .who-we-are-image-new img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Copyright Area */
+  .copyright-area {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+  }
+
+  .copyright-area p {
+    color: white;
+    font-weight: 600;
+  }
+
+  /* EDU.IDA Banner */
+  .edu-banner {
+    background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fbcfe8 100%);
+    padding: 40px 0;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .edu-banner h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: bounce-rotate 3s ease-in-out infinite;
+    text-shadow: 2px 2px 4px rgba(190, 24, 93, 0.3);
+  }
+
+  .edu-banner p {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .edu-banner a {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+    border-radius: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Fredoka', sans-serif;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .edu-banner a:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.6);
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+  }
+
+  /* Go To Top Button */
+  .go-top {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    animation: float 3.5s ease-in-out infinite;
+  }
+
+  .go-top:hover {
+    transform: scale(1.1);
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .main-banner h1 {
+      font-size: 2.5rem;
+    }
+
+    .banner-btn {
+      flex-direction: column;
+    }
+
+    .main-banner-image img {
+      max-width: 100%;
+    }
+  }
+</style>
 <title>Ida - personal page</title>
 <link rel="icon" type="image/png" href="https://templates.envytheme.com/ketan/default/assets/img/favicon.png">
 </head>
@@ -53,7 +378,7 @@
 <div class="main-banner-content">
 <span>Здраво, јас сум</span>
 <h1>ИДА</h1>
-<p>имам 7 години и сум второ одделение. Јас го нацртав овој цртеж со девојче.</p>
+<p>имам 8 години и сум трето одделение. Јас го нацртав овој цртеж со девојче.</p>
 <div class="banner-btn">
 <a href="#who-we-are" class="default-btn">
 Повеќе
@@ -98,8 +423,8 @@
 <div class="container">
 <div class="row align-items-center">
 <div class="col-lg-6">
-<div class="who-we-are-image">
-<img src="./files/ida.jpg" alt="image">
+<div class="who-we-are-image-new">
+<img src="./files/ida_running.jpg" alt="Ida running">
 </div>
 </div>
 <div class="col-lg-6">
@@ -135,36 +460,19 @@
 </div>
 </section>
 
-<section class="who-we-are ptb-100" id="who-we-are">
-    <div class="container">
-        <div class="who-we-are-content">
-        <span>Математика (II одделение)</span>
-            <div class="kvizovi-link">
-                <a class="optional-btn" href="./kvizovi/money-quizes/money-quiz-level-1/index.html">Демо: Плаќање со монети</a>
-            </div>
-            <div class="kvizovi-link">
-                <a class="optional-btn" href="./kvizovi/math-quiz-multiplication-by-2-level-1/index.html">Удвојување (ниво 1)</a>
-            </div>
-            <div class="kvizovi-link">
-                <a class="optional-btn" href="./kvizovi/math-quiz-multiplication-by-2-level-2/index.html">Удвојување (ниво 2)</a>
-            </div>
-            <div class="kvizovi-link">
-                <a class="optional-btn" href="./kvizovi/math-quiz-division-by2-level-1/index.html">Преполовување (ниво 1)</a>
-            </div>
-            <div class="kvizovi-link">
-                <a class="optional-btn" href="./kvizovi/math-quiz-division-by2-level-2/index.html">Преполовување (ниво 2)</a>
-            </div>   
-        </div> 
-    </div>
+<section class="edu-banner">
+<div class="container">
+<h2>🎓 EDU.IDA 🎓</h2>
+<p>Учи математика и се забавувај со интерактивни квизови!</p>
+<a href="https://edu.ida.mk" target="_blank">Посети го EDU.IDA</a>
+</div>
 </section>
-
- 
 
 <div class="copyright-area">
 <div class="container">
 <div class="copyright-area-content">
 <p>
-Copyright © 2024 Тато & Ида
+Copyright © 2026 Тато & Ида
 </p>
 </div>
 </div>
